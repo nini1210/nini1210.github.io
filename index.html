@@ -1,38 +1,375 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <title>my little puzzle</title>
-  <script src="my puzzle.js"></script>
-  <style type="text/css">
-    h1 {
-      font-size:40px;
-      padding-left: 1em;
-      color: white;
-      line-height:40px;}
-    b{
-      font-family: Helvetica, Geneva, Arial,
-              SunSans-Regular, sans-serif;
-      font-size:20px;
-      padding-left:15em;
-      color:#E6E6FA;
-      line-height:40px;
-    }
-    a{
-      font-family: Helvetica, Geneva, Arial,
-              SunSans-Regular, sans-serif;
-      padding-left:9em;
-      color:darkgreen;
-      line-height:40px;
-      font-size:40px;
-      font-weight:bold;
-    }
-    </style>
+<!-- <!doctype html>
+<html lang="CN">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 国内 Staticfile CDN 上的 Bootstrap5 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <title>熊兔动物园</title>
   </head>
-  <body background="微信图片_20220415191022.jpg">
-  <h1 >今天天气真好，</h1>
-  <h1 >我想为你写诗。</h1>
-  <b>“我在每一天里重新诞生，每天都是我的新生命的开始。”——左拉</b>
-  <li><a href="second.html">点击，走进属于你的诗。</a>
-</body>
+  <body>
+    <!-- 导航导航导航 -->
+    <nav class="navbar navbar-expand-lg bg-danger navbar-dark sticky-top">
+      <div class="container-fluid">
+        <img src="./图片/logo.png" width="50" height="50" class="d-inline-block align-top" alt="">
+        <a href="#" class="navbar-brand text-white fs-3 fw-bolder">熊兔幼儿园</a>
+        <!-- 右侧侧标签折叠 -->
+        <button class="navbar-toggler" type="button" class="d-inline-block align-top" data-bs-toggle="collapse" data-bs-target="#naverResponsive">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <audio autoplay="autoplay" controls="controls"loop="loop" preload="auto"
+            src="./yan,M.U.T.S. music studio - Smile Girl.mp3">
+</audio>
+        <div class="collapse navbar-collapse" id="naverResponsive">
+          <!-- 右侧对齐 -->
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-1">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">精品游戏</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">幼儿教育</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">社区大厅</a>
+            </li>
+            <li class="nav-item dropdown">
+              <div class="nav-link dropdown-toggle fs-6 fw-normal" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">个人设置
+              </div>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">账号设置</a></li>
+                <li><a class="dropdown-item" href="#">订单管理</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">联系我们</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- silde -->
+    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      </div>
+      <div class="carousel-iner">
+        <div class="carousel-item active">
+          <img src="./图片/轮播图1.jpg.png" class="w-100 slide">
+          <div class="carousel-caption">
+            <h1 class="display-2 text-white">熊兔动物园</h1>
+            <h3 class="text-white">公众号网站均有优质内容推送</h3>
+            <!-- 点击按钮出现toast -->
+            <button type="button" class="btn btn-danger btn-lg" id="liveToastBtn">点击了解更多哦（点）</button>
+            <div class="toast-container position-fixed bottom-0 end-0 p-3">
+              <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header">
+                  <!-- 出现动态小圆点 -->
+                  <button class="btn btn-danger" type="button" disabled>
+                    <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                    <span class="visually-hidden">Loading...</span>
+                  </button>
+                  <strong class="me-auto">熊兔动物园</strong>
+                  <small>1 second ago</small>
+                  <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body">
+                  关注“熊兔动物园”微信公众号，获取更多育儿经验。
+                </div>
+              </div>
+            </div>
+
+            <button type="button" class="btn btn-outline-danger btn-lg">点击注册</button>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="./图片/轮播图2.jpg.png" class="w-100 slide">
+          <div class="carousel-caption">
+            <h1 class="display-2 text-white">亲子学习新情境</h1>
+             <h3 class="text-white">互动式游戏学习，打开世界之窗</h3>
+             <button type="button" class="btn btn-danger btn-lg">了解更多</button>
+             <button type="button" class="btn btn-outline-danger btn-lg">点击注册</button>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    
+    
+      
+    <!-- 主页面之概念展示 -->
+    <section id="about" class="bg-danger bg-opacity-25 text-center text-sm-start">
+      <div class="container-fluid">
+        <div class="row" >
+          <div class="col-xs-12 col-lg-6 p-5">
+           <div class="info-box">
+              <h1>从动物园里<span class="text-danger fw-bolder">看见大大的世界</span></h1>
+                 <p class="my-4">专业教育团队打造最适合儿童的在线游戏交互学习平台，让教育更简单。开创亲子教育新情境，寓教于乐！</p>
+                 <p class="my-4"><span class="text-danger fw-normal">
+                 Professional education team to create the most suitable for children's online game interactive learning platform, making education simpler!
+                 </span></p>          
+                 <button class="btn btn-danger btn-lg" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">注册入园（点）</button>
+
+                 <!-- 输入页面窗口 -->
+
+                 <div class="offcanvas offcanvas-start bg-danger text-danger" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+                  <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">注册页面</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                  </div>
+                  <div class="offcanvas-body">
+                    <div class="form-floating mb-3">
+                      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                      <label for="floatingInput">Email address</label>
+                    </div>
+                    <div class="form-floating">
+                      <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                      <label for="floatingPassword">Password</label>
+                    </div>
+                    <div class="input-group mb-3">
+                      <span class="input-group-text" id="basic-addon1">点击获取验证码验证码</span>
+                      <input type="text" class="form-control" placeholder="请输入6位验证码" aria-label="" aria-describedby="basic-addon1">
+                    </div>
+                    <label for="basic-url" class="form-label">个人信息</label>
+
+                    <div class="input-group mb-3">
+                      <input type="text" class="form-control" placeholder="Username" aria-label="Username">
+                      <span class="input-group-text">@</span>
+                      <input type="text" class="form-control" placeholder="Server" aria-label="Server">
+                    </div>
+                    <div class="input-group">
+                      <span class="input-group-text">With textarea</span>
+                      <textarea class="form-control" aria-label="With textarea"></textarea>
+                    </div>
+                  </div>
+                </div>  
+            </div>
+          </div>
+           <div class="col-xs-12 col-lg-6">
+             <img src="./图片/熊.png" alt="showcase" class="w-100 mg-responsive center-block">  
+            </div>                   
+        </div>
+      </div>
+    </section>
+
+    <!-- input -->
+    <section id="milestone" class="p-4 bg-danger bg-opacity-50 text-light">
+      <div class="container-fulid">
+        <!-- 第一行的col -->
+          <div class="row text-center justify-content-center gy-4">
+              <div class="col-lg-2 col-sm-6">
+                  <h1 class="display-4">9K+</h1>
+                  <p class="mb-0">内置H5互动游戏</p>
+              </div>
+              <div class="col-lg-2 col-sm-6">
+                  <h1 class="display-4">3-5岁</h1>
+                  <p class="mb-0">覆盖年龄范围</p>
+              </div>
+              <div class="col-lg-2 col-sm-6">
+                  <h1 class="display-4">190</h1>
+                  <p class="mb-0">推出专家课程</p>
+              </div>
+              <div class="col-lg-2 col-sm-6">
+                  <h1 class="display-4">380K</h1>
+                  <p class="mb-0">社交媒体浏览量</p>
+              </div>
+           </div>
+          <!-- 第二行col -->
+          <div class="row text-center justify-content-center gy-4 p-4">
+              <div class="col-lg-4 col-sm-12">        
+                <h4 class="mb-3 fw-bolder">输入信息注册账号进入熊兔动物园</h4>
+              </div>
+                <div class="col-lg-8 col-sm-12">       
+                  <div class="input-group mb-3">
+                    <input type="text" placeholder="请输入手机号码或邮箱注册" class="form-control">
+                    <button class="btn btn-danger btn-lg">注册</button>
+                  </div>
+                </div>
+              </div>
+          </section>
+   <!-- 第二个轮播图 -->
+      <section class="bg-danger bg-opacity-25" id="portfolio">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-12">
+              <div class="intro text-center text-danger p-3">
+                <button class="btn btn-danger" type="button" disabled>
+                  <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                  <span class="visually-hidden">Loading...</span>
+                </button>
+                  <h2>熊兔动物园版块设置</h2>
+                  <p>乐园致力于为孩子与家长提供一个共同学习的环境，在家长陪同下保护孩子视力健康，帮助身心成长</p>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div id="projects-slider" class="owl-theme owl-carousel">
+      <div class="project">
+          <div class="overlay"></div>
+          <img src="./图片/插画1.jpg" alt="">
+          <div class="content text-danger">
+              <h2>家长交流厅</h2>
+              <h6>你的困难，他们这样解决</h6>
+          </div>
+      </div>
+      <div class="project">
+          <div class="overlay"></div>
+          <img src="./图片/插画2.jpg" alt="">
+          <div class="content text-danger">
+              <h3>益智游戏园</h3>
+              <h6>有些知识，玩也能学到</h6>
+          </div>
+      </div>
+      <div class="project">
+          <div class="overlay"></div>
+          <img src="./图片/插画3.jpg" alt="">
+          <div class="content text-danger">
+              <h3>早教精品课</h3>
+              <h6>认识世界，让伙伴陪同进行</h6>
+          </div>
+      </div>
+      <div class="project">
+          <div class="overlay"></div>
+          <img src="./图片/插画4.jpg" alt="">
+          <div class="content text-danger">
+              <h3>成长乐园</h3>
+              <h6>童趣可爱，一网打尽</h6>
+          </div>
+      </div>
+  </div>
+      </section>
+      <!-- 图片+hover -->
+      <section class="bg-danger bg-opacity-25" id="team">
+        <div class="container-fulid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="intro text-center text-danger p-3">
+                      <button class="btn btn-danger" type="button" disabled>
+                        <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                        <span class="visually-hidden">Loading...</span>
+                      </button>
+                        <h2>游戏设置版块</h2>
+                        <p class="mx-auto">动物园创意H5游戏设计，覆盖生活各个场景！（hover）</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-lg-3 col-md-6">
+                  <div class="team-member">
+                      <div class="image">
+                          <img src="./图片/Group1.png" width="200" height="200" alt="">
+                          <div class="word">
+                            <h6 class="text-light">艺术家养成计划</h6>
+                            <p class="text-light text-opacity-50 fs-6">是谁摇身一变成为画家？是我</p>  
+                          </div> 
+                          <div class="overlay"></div>
+                      </div>
+                      <h4 class="text-danger text-opacity-75">道德与美学教育</h4>
+                      <p class="text-danger text-opacity-75">Moral and aesthetic education</p>
+                  </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                  <div class="team-member">
+                      <div class="image">
+                          <img src="./图片/Group2.png"  width="200" height="200" alt="">
+                          <div class="word">
+                            <h6 class="text-light">动物园侦探季</h6>
+                            <p class="text-light text-opacity-50 fs-6">丹顶鹤甄好看突然离奇失踪？！嫌疑人锁定在....</p>  
+                          </div> 
+                          <div class="overlay"></div>
+                      </div>
+                      <h4 class="text-warning text-opacity-75">益智教育</h4>
+                      <p class="text-warning text-opacity-75">Educational education</p>
+                  </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                  <div class="team-member">
+                      <div class="image">
+                          <img src="./图片/Group3.png" c width="200" height="200" alt="">
+                          <div class="word">
+                            <h6 class="text-light">我和我的小鱼朋友</h6>
+                            <p class="text-light text-opacity-50 fs-6">我很想念我的小鱼朋友，但她去了很远很远的地方。她变成了一团影子...</p>  
+                          </div> 
+                          <div class="overlay"></div>
+                      </div>
+                      <h4 class="text-success text-opacity-75">生命与死亡教育</h4>
+                      <p class="text-success text-opacity-75">Life and Death Education</p>
+                  </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                <div class="team-member">
+                    <div class="image">
+                        <img src="./图片/Group4.png" c width="200" height="200" alt="">
+                        <div class="word">
+                          <h6 class="text-light">绿色家园</h6>
+                          <p class="text-light text-opacity-50 fs-6">（文本待填充）</p>  
+                        </div> 
+                        <div class="overlay"></div>
+                    </div>
+                    <h4 class="text-primary text-opacity-75">健康与环保教育</h4>
+                    <p class="text-primary text-opacity-75">Health and environmental education</p>
+                </div>
+            </div>
+        </div>
+          </div>
+      </div>
+  </section>
+     <!-- input -->
+    <section class="p-4 bg-danger bg-opacity-50 text-danger">
+            <div class="container-fulid">
+              <div class="row" >
+                <div class="col-xs-12 col-sm-4">        
+                  <h4 class="mb-3">输入信息注册账号进入熊兔动物园</h4>
+                </div>
+                <div class="col-xs-12 col-sm-8">       
+                <div class="input-group mb-3">
+                  <input type="text" placeholder="请输入手机号码或邮箱注册" class="form-control">
+                  <button class="btn btn-danger btn-lg">注册</button>
+                </div>
+              </div>
+            </div>
+          </div>
+   </section>
+
+   <footer>
+    <div class="footer-top text-center">
+        <div class="container-fluid p-3">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 text-sm-start">
+                    <h4 class="navbar-brand text-light">熊兔动物园<span class="dot">.</span></h4>
+                    <p>合作伙伴：智慧树 少儿频道 宝宝巴士 smartmouse</p>
+                    <p>创业团队：中国传媒大学春甜花花幼儿园</p>
+                    <p>网页制作：花花网页组·赵莉莉·just for homework</p>
+                    <p>官方微信：熊兔动物园</p>
+                    <p>官方微博：暂无</p>
+                </div>
+                <div class="col-lg-6 text-sm-end">
+                  <img src="./图片/logo.png" width="250" height="250" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom text-center">
+        <p class="mb-0">JUST WAITING @2022. EVERYTHING WILL BE ALLRIGHT.</p>
+    </div>
+</footer>
+    <!--js文件-->
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.min.js"></script>
+    <script src="js/js.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/app.js"></script>
+
+  </body>
 </html>
