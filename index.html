@@ -118,8 +118,41 @@
           <div class="carousel-caption">
             <h1 class="display-2 text-white">亲子学习新情境</h1>
              <h3 class="text-white">互动式游戏学习，打开世界之窗</h3>
-             <button type="button" class="btn btn-danger btn-lg">了解更多</button>
-             <button type="button" class="btn btn-outline-danger btn-lg">点击注册</button>
+            <!-- 点击按钮出现toast -->
+            <button type="button" class="btn btn-danger btn-lg" id="liveToastBtns">了解更多</button>
+            <button type="button" class="btn btn-outline-danger btn-lg" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptionsa" aria-controls="offcanvasWithBothOptionsa">点击注册</button>
+            <!-- 输入页面窗口 -->
+            <div class="offcanvas offcanvas-start bg-danger text-danger" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptionsa" aria-labelledby="offcanvasWithBothOptionsLabela">
+              <div class="offcanvas-header">
+                <h3 class="offcanvas-title text-light" id="offcanvasWithBothOptionsLabela">注册页面</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <div class="form-floating mb-3">
+                  <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                  <label for="floatingInput">Email address</label>
+                </div>
+                <div class="form-floating">
+                  <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                  <label for="floatingPassword">Password</label>
+                </div>
+                <div class="input-group mb-3">
+                  <span class="input-group-text text-danger fw-bolder fs-6" id="basic-addon1">点击获取验证码验证码</span>
+                  <input type="text" class="form-control fw-bolder fs-6" placeholder="请输入6位验证码" aria-label="" aria-describedby="basic-addon1">
+                </div>
+                <label for="basic-url" class="form-label">个人信息</label>
+
+                <div class="input-group mb-3">
+                  <input type="text" class="form-control fw-bolder fs-6" placeholder="Username" aria-label="Username">
+                  <span class="input-group-text fw-bolder fs-6">@</span>
+                  <input type="text" class="form-control fw-bolder fs-6" placeholder="Server" aria-label="Server">
+                </div>
+                <div class="input-group">
+                  <span class="input-group-text fw-bolder fs-6">个性签名~</span>
+                  <textarea class="form-control" aria-label="With textarea"></textarea>
+                </div>
+              </div>
+            </div> 
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
@@ -145,13 +178,13 @@
                  <p class="my-4"><span class="text-danger fw-normal">
                  Professional education team to create the most suitable for children's online game interactive learning platform, making education simpler!
                  </span></p>          
-                 <button class="btn btn-danger btn-lg" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">注册入园（点）</button>
+                 <button class="btn btn-danger btn-lg" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptionss" aria-controls="offcanvasWithBothOptionss">注册入园（点）</button>
 
                  <!-- 输入页面窗口 -->
 
-                 <div class="offcanvas offcanvas-start bg-danger text-danger" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+                 <div class="offcanvas offcanvas-start bg-danger text-danger" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptionss" aria-labelledby="offcanvasWithBothOptionsLabels">
                   <div class="offcanvas-header">
-                    <h3 class="offcanvas-title text-light" id="offcanvasWithBothOptionsLabel">注册页面</h3>
+                    <h3 class="offcanvas-title text-light" id="offcanvasWithBothOptionsLabels">注册页面</h3>
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                   </div>
                   <div class="offcanvas-body">
